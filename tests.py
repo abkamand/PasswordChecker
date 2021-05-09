@@ -9,7 +9,7 @@ class MyTestCase(unittest.TestCase):
         self.assertFalse(check_pwd(pw), msg='Does not meet the requirements '
                                             '(num={})'.format(pw))
 
-    # checks length, if a string of less than 8 chars returns false
+    # checks length, if a string of 8 chars returns true
     def test2(self):
         pw = 'Ab34567$'
         self.assertTrue(check_pwd(pw), msg='Does not meet the requirements '''
