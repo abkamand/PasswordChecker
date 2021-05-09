@@ -39,6 +39,13 @@ class MyTestCase(unittest.TestCase):
         self.assertFalse(check_pwd(pw), msg='Does not meet the requirements '
                                             '(num={})'.format(pw))
 
+    # checks if pw that does not contain a symbol from "~`!@#$%^&*()_+-="
+    # returns false
+    def test7(self):
+        pw = 'aBcdefgh1'
+        self.assertFalse(check_pwd(pw), msg='Does not meet the requirements '
+                                            '(num={})'.format(pw))
+
 
 if __name__ == '__main__':
     unittest.main()
