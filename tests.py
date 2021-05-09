@@ -33,6 +33,12 @@ class MyTestCase(unittest.TestCase):
         self.assertFalse(check_pwd(pw), msg='Does not meet the requirements '
                                             '(num={})'.format(pw))
 
+    # checks if pw that does not contain a digit returns false
+    def test6(self):
+        pw = 'aBcdefgh$'
+        self.assertFalse(check_pwd(pw), msg='Does not meet the requirements '
+                                            '(num={})'.format(pw))
+
 
 if __name__ == '__main__':
     unittest.main()
