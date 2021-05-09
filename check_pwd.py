@@ -1,2 +1,5 @@
 def check_pwd(pw):
-    return False
+    pw_length = len(pw)
+
+    if pw_length >= 8:
+        return True
