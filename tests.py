@@ -21,6 +21,12 @@ class MyTestCase(unittest.TestCase):
         self.assertFalse(check_pwd(pw), msg='Does not meet the requirements '
                                             '(num={})'.format(pw))
 
+    # checks if pw that does not contain a lowercase letter returns false
+    def test4(self):
+        pw = 'AB345678$'
+        self.assertFalse(check_pwd(pw), msg='Does not meet the requirements '
+                                            '(num={})'.format(pw))
+
 
 if __name__ == '__main__':
     unittest.main()
