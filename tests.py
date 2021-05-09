@@ -15,6 +15,12 @@ class MyTestCase(unittest.TestCase):
         self.assertTrue(check_pwd(pw), msg='Does not meet the requirements '''
                                            '(num={})'.format(pw))
 
+    # checks length, if a string of greater than 20 chars returns false
+    def test3(self):
+        pw = 'Ab34567$8910111235670'
+        self.assertFalse(check_pwd(pw), msg='Does not meet the requirements '
+                                            '(num={})'.format(pw))
+
 
 if __name__ == '__main__':
     unittest.main()
