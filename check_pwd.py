@@ -1,6 +1,7 @@
 def check_pwd(pw):
     count_lower = 0
     count_upper = 0
+    count_digit = 0
 
     pw_length = len(pw)
 
@@ -12,7 +13,9 @@ def check_pwd(pw):
             count_lower += 1
         if char.isupper():
             count_upper += 1
-    if count_lower == 0 or count_upper == 0:
+        if char.isdigit():
+            count_digit += 1
+    if count_lower == 0 or count_upper == 0 or count_digit == 0:
         return False
 
     return True
